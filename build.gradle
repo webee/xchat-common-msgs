@@ -1,7 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'maven'
 
-group 'com.github.webee.xchat'
+group 'com.github.webee'
 version '0.1.0'
 
 sourceCompatibility = 1.7
