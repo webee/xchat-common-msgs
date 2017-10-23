@@ -1,4 +1,4 @@
-# msg-codec
+# xchat-common-msgs
 
 [![Release](https://img.shields.io/github/release/webee/xchat-common-msgs.svg?label=maven%20version)](https://jitpack.io/#webee/xchat-common-msgs)
 
