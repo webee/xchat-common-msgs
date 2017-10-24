@@ -31,7 +31,8 @@ public class TextMsg extends MapMsg {
     }
 
     @Override
-    public void digestMap(Map<String, Object> map) {
+    public TextMsg digestMap(Map<String, Object> map) {
         text = (String) map.get("text");
+        return this;
     }
 }

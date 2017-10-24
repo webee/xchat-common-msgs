@@ -30,8 +30,10 @@ public class VoiceMsg extends FileMsg {
     }
 
     @Override
-    public void digestMap(Map<String, Object> map) {
+    public VoiceMsg digestMap(Map<String, Object> map) {
         super.digestMap(map);
         duration = (int) map.get("duration");
+
+        return this;
     }
 }

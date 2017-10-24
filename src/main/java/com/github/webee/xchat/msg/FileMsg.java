@@ -40,9 +40,10 @@ public class FileMsg extends MapMsg {
     }
 
     @Override
-    public void digestMap(Map<String, Object> map) {
+    public FileMsg digestMap(Map<String, Object> map) {
         name = (String) map.get("name");
         url = (String) map.get("url");
         size = (int) map.get("size");
+        return this;
     }
 }
