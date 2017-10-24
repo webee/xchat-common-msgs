@@ -69,7 +69,9 @@ public class JsonMapMsgCodec implements MsgCodec<String> {
                     Class<? extends Msg> msgCls = typeMsgMappings.get(t);
                     if (msgCls != null) {
                         JSONObject value = json.parseObject(msg.substring(t.length() + 1));
-                        return (Msg) ((MapX)msgCls.newInstance()).digestMap(value.get());
+                        Msg m = msgCls.newInstance();
+                        ((MapX)m).digestMap(value.get());
+                        return m;
                     }
                 }
             } catch (Throwable t) {

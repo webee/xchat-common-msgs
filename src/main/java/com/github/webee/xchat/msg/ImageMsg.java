@@ -37,12 +37,10 @@ public class ImageMsg extends FileMsg {
     }
 
     @Override
-    public ImageMsg digestMap(Map<String, Object> map) {
+    public void digestMap(Map<String, Object> map) {
         super.digestMap(map);
         w = (int) map.get("w");
         h = (int) map.get("h");
         thumbnail = (String) map.get("thumbnail");
-
-        return this;
     }
 }

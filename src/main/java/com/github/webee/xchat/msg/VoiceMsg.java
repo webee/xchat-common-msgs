@@ -8,6 +8,7 @@ import java.util.Map;
  * Time: 下午5:58
  */
 public class VoiceMsg extends FileMsg {
+    // 录音长度(单位ms)
     public int duration;
 
     public void init(String name, String url, int size, int duration) {
@@ -30,10 +31,8 @@ public class VoiceMsg extends FileMsg {
     }
 
     @Override
-    public VoiceMsg digestMap(Map<String, Object> map) {
+    public void digestMap(Map<String, Object> map) {
         super.digestMap(map);
         duration = (int) map.get("duration");
-
-        return this;
     }
 }
