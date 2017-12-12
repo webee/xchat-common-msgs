@@ -1,7 +1,5 @@
 package com.github.webee.xchat.msg;
 
-import com.github.webee.msg.codec.MapMsg;
-
 import java.util.Map;
 
 /**
@@ -9,7 +7,7 @@ import java.util.Map;
  * Date: 17/10/23
  * Time: 下午5:34
  */
-public class TextMsg extends MapMsg {
+public class TextMsg extends PropsMsg {
     public String text;
 
     public void init(String text) {
@@ -32,6 +30,7 @@ public class TextMsg extends MapMsg {
 
     @Override
     public void digestMap(Map<String, Object> map) {
+        super.digestMap(map);
         text = (String) map.get("text");
     }
 }

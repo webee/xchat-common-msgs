@@ -31,9 +31,9 @@ public class JsonMapMsgCodec implements MsgCodec<String> {
             } catch (Throwable t) {
                 throw new RuntimeException("bad msg class");
             }
+            this.typeMsgMappings.put(entry.getKey(), entry.getValue());
             msgTypeMappings.put(entry.getValue(), entry.getKey());
         }
-        this.typeMsgMappings.putAll(typeMsgMappings);
     }
 
     public JsonMapMsgCodec(JSON json) {

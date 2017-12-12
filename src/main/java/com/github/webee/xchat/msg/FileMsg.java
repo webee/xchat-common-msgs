@@ -1,7 +1,5 @@
 package com.github.webee.xchat.msg;
 
-import com.github.webee.msg.codec.MapMsg;
-
 import java.util.Map;
 
 /**
@@ -9,7 +7,7 @@ import java.util.Map;
  * Date: 17/10/23
  * Time: 下午5:35
  */
-public class FileMsg extends MapMsg {
+public class FileMsg extends PropsMsg {
     // 文件名，通过其后缀名判断文件类型
     public String name;
     // 文件url
@@ -41,6 +39,7 @@ public class FileMsg extends MapMsg {
 
     @Override
     public void digestMap(Map<String, Object> map) {
+        super.digestMap(map);
         name = (String) map.get("name");
         url = (String) map.get("url");
         size = (int) map.get("size");

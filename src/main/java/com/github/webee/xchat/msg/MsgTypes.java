@@ -10,7 +10,7 @@ import java.util.Map;
  * Date: 17/10/24
  * Time: 下午2:09
  */
-public class MsgType {
+public class MsgTypes {
     public final static Map<String, Class<? extends Msg>> typeMsgs = new HashMap<>();
 
     static {
