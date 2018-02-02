@@ -12,7 +12,7 @@ public class FileMsg extends PropsMsg {
     public String name;
     // 文件url
     public String url;
-    // 文件大小(单位bytes)
+    // 文件大小(单位bytes), -1: 无效值
     public int size;
 
     public void init(String name, String url, int size) {
@@ -42,6 +42,6 @@ public class FileMsg extends PropsMsg {
         super.digestMap(map);
         name = (String) map.get("name");
         url = (String) map.get("url");
-        size = (int) map.get("size");
+        size = Utils.safeInt(map.get("size"), -1);
     }
 }

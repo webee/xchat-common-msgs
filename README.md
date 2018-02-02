@@ -15,6 +15,6 @@ To install the library add:
         maven { url "https://jitpack.io" }
    }
    dependencies {
-         compile 'com.github.webee:xchat-common-msgs:v0.5.0'
+         compile 'com.github.webee:xchat-common-msgs:v0.6.0'
    }
    ```
